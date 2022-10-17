@@ -1,11 +1,11 @@
-name: Publish Package to npmjs
+name: Publish to NPM
 
 on:
   workflow_dispatch:
     inputs:
       version:
-      type: string
-      default: ''
+        type: string
+        default: ''
 
 jobs:
   build:
