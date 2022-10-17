@@ -15,9 +15,10 @@ jobs:
       - name: 'Set Git Config'
         run: |
           git config --global user.email "ubyfishcode@gmail.com"
+      
       - name: 'Build Package'
         run: |
-            npm ci
+            npm install
       - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
