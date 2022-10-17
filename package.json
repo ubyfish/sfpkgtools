@@ -1,0 +1,72 @@
+{
+  "name": "sfpkgtools",
+  "description": "Salesforce Unlocked pkg tools",
+  "version": "0.0.1",
+  "author": "Craig Bradshaw @ubyfish",
+  "bugs": "https://github.com/ubyfish/sfpkgtools/issues",
+  "dependencies": {
+    "@dxatscale/sfp-logger": "^1.0.2",
+    "@oclif/core": "^1",
+    "@salesforce/command": "^5",
+    "@salesforce/core": "^3",
+    "cli-table3": "^0.6.2",
+    "simple-git": "^3.14.1",
+    "tslib": "^2"
+  },
+  "devDependencies": {
+    "@oclif/test": "^2",
+    "@salesforce/ts-sinon": "^1",
+    "@types/chai": "^4",
+    "@types/mocha": "^8",
+    "@typescript-eslint/eslint-plugin": "^4",
+    "@typescript-eslint/parser": "^4",
+    "chai": "^4",
+    "eslint": "^7",
+    "eslint-config-prettier": "^8",
+    "eslint-plugin-header": "^3",
+    "eslint-plugin-import": "^2",
+    "eslint-plugin-jsdoc": "^35",
+    "eslint-plugin-prettier": "^3",
+    "eslint-plugin-typescript": "^0",
+    "mocha": "^9",
+    "nyc": "^15",
+    "oclif": "^3",
+    "prettier": "^2",
+    "sinon": "10.0.0",
+    "ts-node": "^10",
+    "typescript": "4"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "files": [
+    "/lib",
+    "/messages",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json"
+  ],
+  "homepage": "https://github.com/ubyfish/sfpkgtools",
+  "keywords": [
+    "sfdx-plugin"
+  ],
+  "license": "MIT",
+  "oclif": {
+    "commands": "./lib/commands",
+    "bin": "sfdx",
+    "topics": {
+      "sfpkgtools": {
+        "description": "Tools for packages : info, latest, pkginfo, installed, validate, taglatest "
+      }
+    }
+  },
+  "repository": "ubyfish/sfpkgtools",
+  "scripts": {
+    "build": "tsc -p .",
+    "lint": "eslint src/**/*.ts test/**/*.ts",
+    "postpack": "rm -f oclif.manifest.json",
+    "posttest": "eslint src/**/*.ts test/**/*.ts",
+    "prepack": "rm -rf lib && tsc -b && oclif manifest && oclif readme",
+    "test": "nyc --extension .ts --require ts-node/register mocha --forbid-only \"test/**/*.test.ts\"",
+    "version": "oclif readme && git add README.md"
+  }
+}

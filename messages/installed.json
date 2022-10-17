@@ -1,0 +1,11 @@
+{
+  "commandDescription": "Table view of installed packages in an org. can be filtered by supplied name",
+  "nameFlagDescription": "name of the package",
+  "errorNoOrgResults": "No results found for org %s",
+  "errorManyResults": "Could not filter Packages to specific version in %s",
+  "errorGeneric": "Failed to get installed pacakge infor. Error : %s",
+  "examples": [
+    "sfpkgtools:installed --targetusername devhub@org.com",
+    "sfpkgtools:installed --name my-core-pkg --targetusername devhub@org.com"
+  ]
+}

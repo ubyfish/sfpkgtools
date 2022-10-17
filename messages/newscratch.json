@@ -1,0 +1,13 @@
+{
+  "commandDescription": "Create new scratch org, configures previous or preview and email developer credentials",
+  "emailFlagDescription": "Email credenitals to users (devhubuser)",
+  "adminEmailFlagDescription": "Email address to set as admin - otherwise derived from the devHub user email",
+  "numberOfDaysFlagDescription": "number of days to keep the org (defaults to 5)",
+  "orgAliasFlagDescription": "Org alias",
+  "configFlagDescription": "Scratch Org Definition file Path - defaults to ./config/scratch-org-config/project-scratch-def.json",
+  "errorNoOrgResults": "Unable to create scratch org : %s",
+  "examples": [
+    "sfpkgtools:org:newscratch --targetdevhubusername devhub@org.com",
+    "sfpkgtools:org:newscratch --targetdevhubusername devhub@org.com --email --numberofdays 1 --orgalias so1 --configpath=./config/project-scratch-def.json"
+  ]
+}

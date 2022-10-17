@@ -1,0 +1,13 @@
+{
+  "commandDescription": "Get the latest package version info",
+  "nameFlagDescription": "name of the package",
+  "fromCommitFlagDescription": "pacakge version number e.g. 1.1.1.1",
+  "toCommitFlagDescription": "package version id 04t....",
+  "metaFiltersFlagDescription": "when supplied all beta versions of the package version will be returned - e.g. 1.1.0.1,1.1.0.2,1.1.0.2 ",
+  "errorNoOrgResults": "No results found for the package '%s' and version '%s'",
+  "examples": [
+    "sfpkgtools:info --name my-core-pkg --targetdevhubusername devhub@org.com --versionnumber 1.28.0.1",
+    "sfpkgtools:info --name my-core-pkg --targetdevhubusername devhub@org.com versionId 04txxxxxxxxxxx",
+    "sfpkgtools:info --name my-core-pkg --targetdevhubusername devhub@org.com --versionnumber 1.28.0.1 -b"
+  ]
+}

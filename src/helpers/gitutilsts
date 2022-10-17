@@ -1,0 +1,28 @@
+/*
+ * Copyright (c) 2022, ubyfish
+ * All rights reserved.
+ * Licensed under the BSD 3-Clause license.
+ * For full license text, see LICENSE.txt file in the repo root or https://opensource.org/licenses/BSD-3-Clause
+ * ------------------------------------------------------------------------------------------------------------
+ * model interface and helper methods for packaging
+ */
+
+import { Connection } from '@salesforce/core';
+
+
+export async function gitDelta(connection:Connection,userName:string):Promise<FileInfo[]> {
+    //get latest release version and get tag
+    let pkdDetails = [];
+    const pkg = {} as FileInfo;
+    pkdDetails.push(pkg);
+    return pkdDetails;
+}
+
+// The type we are querying for
+export interface FileInfo {
+    fullName: string;
+    FileName:string;
+    path:string;
+    type:string,
+}
+

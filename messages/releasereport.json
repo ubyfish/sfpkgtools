@@ -1,0 +1,9 @@
+{
+  "commandDescription": "Generate some report info from a releasePlan.json definition. If you supply targetusername it checks the org if installed ",
+  "releaseplanFlagDescription": "supply the location of a valid releasePlan.json",
+  "errorNoOrgResults": "No release plan found or invalid for %s",
+  "examples": [
+    "sfpkgtools:release:report --targetdevhubusername PROD --targetusername SIT1",
+    "sfpkgtools:release:report --targetdevhubusername PROD --releaseplan ../releasePlan.json"
+  ]
+}

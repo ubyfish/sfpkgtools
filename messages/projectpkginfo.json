@@ -1,0 +1,8 @@
+{
+  "commandDescription": "Gets the Package information for this project from the target Org. Useful for getting tag information",
+  "errorNoOrgResults": "No results found for the packages in org '%s'",
+  "errorManyOrgResults": "Many results found for the packages in org '%s'",
+  "examples": [
+    "sfpkgtools:project:pkginfo --targetdevhubusername devhub@org.com --targetusername sfdxsit1"
+  ]
+}
