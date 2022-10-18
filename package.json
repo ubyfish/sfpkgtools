@@ -1,8 +1,11 @@
 {
   "name": "sfpkgtools",
   "description": "Salesforce Unlocked pkg tools",
-  "version": "0.0.1",
-  "author": "Craig Bradshaw @ubyfish",
+  "version": "0.0.0.1",
+  "author": {
+    "name": "Craig Bradshaw",
+    "email": "ubyfishcode@gmail.com"
+},  
   "bugs": "https://github.com/ubyfish/sfpkgtools/issues",
   "dependencies": {
     "@dxatscale/sfp-logger": "^1.0.2",
@@ -45,19 +48,53 @@
     "/npm-shrinkwrap.json",
     "/oclif.manifest.json"
   ],
-  "homepage": "https://github.com/ubyfish/sfpkgtools",
+  "homepage": "https://github.com/ubyfish",
   "keywords": [
     "sfdx-plugin"
   ],
   "license": "MIT",
+  "main": "./lib/index.js",
   "oclif": {
     "commands": "./lib/commands",
     "bin": "sfdx",
+    "main": "./lib/index.js",
+    "devPlugins": [
+      "@oclif/plugin-help"
+    ],
     "topics": {
       "sfpkgtools": {
-        "description": "Tools for packages : info, latest, pkginfo, installed, validate, taglatest "
+          "description": "Tools for packages : info, latest, pkginfo, installed, validate, taglatest",
+          "external": true,
+          "subtopics": {
+              "info": {
+                  "description": "Package information - coverage, tag etc"
+              },
+              "installed": {
+                  "description": "Packages installed in org with optional filter"
+              },
+              "version:latest": {
+                  "description": "Show latest versions or all beta versions"
+              },
+              "version:taglatest": {
+                  "description": "Tag last package with commit hash"
+              },
+              "release:report": {
+                  "description": "Report on coverage and if ready for release"
+              },
+              "project:pkginfo": {
+                  "description": "Shows the packag infor for the project packages"
+              },
+              "org:newscratch": {
+                  "description": "Create a new scratch org, email info to admin"
+              },
+              "create:validate": {
+                  "description": "Checks if the package is the latest, if the commit # has been used before"
+              },
+              "config": {
+                "description": "Reads the local config.json"
+            }              
+          }
       }
-    }
   },
   "repository": "ubyfish/sfpkgtools",
   "scripts": {
