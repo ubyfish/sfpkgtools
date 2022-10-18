@@ -1,7 +1,7 @@
 {
   "name": "sfpkgtools",
   "description": "Salesforce Unlocked pkg tools",
-  "version": "0.0.0.1",
+  "version": "0.0.0.2",
   "author": {
     "name": "Craig Bradshaw",
     "email": "ubyfishcode@gmail.com"
@@ -57,7 +57,6 @@
   "oclif": {
     "commands": "./lib/commands",
     "bin": "sfdx",
-    "main": "./lib/index.js",
     "devPlugins": [
       "@oclif/plugin-help"
     ],
@@ -94,6 +93,7 @@
                 "description": "Reads the local config.json"
             }              
           }
+        }
       }
   },
   "repository": "ubyfish/sfpkgtools",
